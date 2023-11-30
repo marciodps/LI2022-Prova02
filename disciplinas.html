@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.css">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Lab Info</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="collapse navbar-collapse" id="navbarsExample02">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">A Disciplina</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+            </ul>
+            <form role="search">
+              <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            </form>
+          </div>
+        </div>
+    </nav>
+    <div class="px-4 py-5 my-5 text-center">
+        <h1 class="display-5 fw-bold text-body-emphasis">DEMO JSON com Bootstrap-Table</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">Exemplo de utilização.</p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Botão primário</button>
+            <button type="button" class="btn btn-outline-secondary btn-lg px-4">Botão secundário</button>
+          </div>
+        </div>
+      </div>
+
+    <div class="px-4 py-5 my-5 text-center">
+        <table id="tb1">
+            <thead>
+                <tr>
+                    <th data-field="id">ID</th>
+                    <th data-field="name">NAME</th>
+                    <th data-field="price">PRICE</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.js"></script>
+    
+    <script>
+        var mydata = 
+        [
+            {
+                "id": 0,
+                "name": "test0",
+                "price": "0$"
+            },
+            {
+                "id": 1,
+                "name": "test1",
+                "price": "1$"
+            },
+            {
+                "id": 2,
+                "name": "test2",
+                "price": "2$"
+            },
+            {
+                "id": 3,
+                "name": "test3",
+                "price": "3$"
+            }
+        ];
+
+        $(function() {
+            $("#tb1").bootstrapTable({data:mydata});
+            console.log(mydata);
+        }
+        );
+    </script>
+  </body>
+</html>
+
